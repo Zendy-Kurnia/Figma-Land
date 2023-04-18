@@ -6,14 +6,21 @@
 
 :root {
     --primary: #2091F9;
+    --text-color: #252B42;
+    --drpshdw : drop-shadow(0px 8.14769px 63.1446px rgba(0, 0, 0, 0.15));
 }
 
 
 body {
     font-family: 'Quicksand', sans-serif, system-ui;
     height: 10000px;
+    letter-spacing: 0.2px;
 }
 
+section .container {
+    max-width: 1440px;
+    margin: auto;
+}
 
 nav {
     display: flex;
@@ -28,6 +35,7 @@ nav {
     padding: 53px 40px;
     z-index: 1;
     /* border: 1px solid white; */
+    
 }
 
 
@@ -93,8 +101,6 @@ a {
 
 
 .hero {
-    position: absolute;
-    top: 0;
     width: 100%;
     height: 1043px;
     color: white;
@@ -105,17 +111,9 @@ a {
 }
 
 
-/* .hero img {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    z-index: -1;
-} */
-
 .hero .container {
     width: max-content;
-    height: 100vh;
-    margin: auto;
+    margin: 110px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -170,4 +168,106 @@ button:hover {
     padding: 16px 58px;
     border-radius: 35px;
     margin: 0 auto;
+}
+
+
+
+
+/* Features */ 
+
+.section-title{
+    width: 100%;
+    max-width: 545px;
+    margin: auto;
+    color: var(--text-color);
+    text-align: center;
+    margin-top: 115px ;
+    margin-bottom: 80px;
+ 
+}
+
+.section-title h2 {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 55px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    margin-bottom:17px ;
+}
+
+.section-title p {
+    font-size: 28px;
+    line-height: 40px;
+}
+
+
+.features-list {
+    width: 870px;
+    margin: 0 auto;
+    text-align: center;
+    display: grid;
+    column-gap: 52px;
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+
+.feature h3 {
+    margin: 20px 0 0;
+    padding: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.feature p {
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 400;
+    padding: 10px;
+}
+
+.features .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.features-video {
+    position: relative;
+}
+
+.features-video video {
+    width: 1177px;
+    height: auto;
+    margin: 132px 0;
+    filter: var(--drpshdw);
+    border-radius: 44.8123px;
+    cursor: pointer;
+}
+
+
+
+button.play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    filter: var(--drpshdw);
+}
+
+button.play img {
+    margin-left: 9px;
+    width: 46px;
+    height: 46px;
 }
