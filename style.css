@@ -12,7 +12,6 @@
 
 body {
   font-family: "Quicksand", sans-serif, system-ui;
-  height: 10000px;
   letter-spacing: 0.2px;
 }
 
@@ -146,11 +145,10 @@ button {
 
 button:hover {
   opacity: 0.9;
-  font-weight: 600;
   transition: 0.2s all ease-in;
 }
 
-button.try-for-free {
+button.main {
   color: white;
   padding: 16px 58px;
   border-radius: 35px;
@@ -316,4 +314,107 @@ button.play img {
 }
 .partners-list img:nth-child(5) {
   grid-area: five;
+}
+
+/* Plan and Pricing */
+
+#pricing {
+  background: #252b42;
+  color: white;
+  padding: 100px;
+}
+
+#pricing .section-title {
+  color: white;
+  margin: 0 0 80px;
+}
+
+#pricing .pricelist {
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 1105px;
+  display: flex;
+  gap: 50px;
+  text-align: center;
+  align-items: center;
+}
+
+.pricelist .plan {
+  background: white;
+  color: var(--text-color);
+  border-radius: 10px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  height: max-content;
+  width: 300px;
+}
+
+.pricelist .featured-plan {
+  background-color: var(--primary);
+  color: white;
+  width: 335px;
+}
+
+.pricelist .featured-plan button {
+  background-color: white;
+  color: var(--primary);
+}
+
+.pricelist .plan-title h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.8;
+  letter-spacing: 0.1px;
+}
+
+.plan-title p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.1px;
+}
+
+.plan .price {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 10px;
+  row-gap: 0px;
+  grid-template-areas:
+    "number dollar"
+    "number pay-info";
+  text-align: left;
+  margin: 0 auto;
+  line-height: 0.5;
+  align-items: center;
+}
+
+.price .number {
+  grid-area: number;
+  display: block;
+  font-weight: 600;
+  font-size: 74px;
+  text-align: right;
+}
+
+.price .dollar-sign {
+  grid-area: dollar;
+  display: block;
+  font-weight: 700;
+  font-size: 20px;
+}
+.price .pay-info {
+  grid-area: pay-info;
+  display: block;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.pricing-features-list {
+  text-align: left;
+  margin: 0 auto;
 }
