@@ -35,17 +35,21 @@ section .container {
 
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+}
+
+nav .container {
   width: 100%;
   max-width: 1200px;
-  height: auto;
-  position: sticky;
-  top: 0;
-  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 53px 40px;
-  z-index: 1;
-  /* border: 1px solid white; */
 }
 
 nav .navbar-desktop-menu {
@@ -97,16 +101,17 @@ a {
 }
 
 .hero {
+  position: relative;
   width: 100%;
   height: 1043px;
   color: white;
   background: url(/res/hero-img-desktop.png) no-repeat;
   background-size: cover;
   background-position: center;
+  display: flex;
 }
 
 .hero .container {
-  width: max-content;
   margin: 110px auto;
   display: flex;
   flex-direction: column;
@@ -417,4 +422,106 @@ button.play img {
 .pricing-features-list {
   text-align: left;
   margin: 0 auto;
+}
+
+/* FOoter */
+
+footer {
+  background: #252b42;
+  color: white;
+  padding: 150px 0;
+}
+
+footer .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* gap: calc(); */
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  justify-content: space-between;
+}
+
+.footer-left div h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0.1px;
+  margin-bottom: 25px;
+}
+
+.footer-left div ul {
+  list-style: none;
+  margin: 0;
+}
+
+.footer-left div ul li {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 2.5;
+  letter-spacing: 0.2px;
+}
+
+.footer-left div ul li a {
+  padding: 0;
+}
+
+.footer-right {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.footer-right .footer-location,
+.footer-right .footer-phone {
+  display: flex;
+  gap: 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 27px;
+  letter-spacing: 0.2px;
+  align-items: center;
+}
+
+.footer-right .footer-location .ic-loc {
+  display: block;
+  width: 35px;
+  height: 40px;
+  background: url(/res/ic-loc.svg) no-repeat;
+  background-size: contain;
+}
+
+.footer-right .footer-phone .ic-phone {
+  display: block;
+  width: 35px;
+  height: 40px;
+  background: url(/res/ic-phone.svg) no-repeat;
+  background-size: contain;
+}
+
+.footer-right .footer-social-link-list {
+  display: flex;
+  gap: 25px;
+  list-style-type: none;
+}
+
+.footer-right .footer-social-link-list li img {
+  width: 35px;
+  height: auto;
+}
+
+.footer-right .footer-social-link-list li a {
+  padding: 0;
 }
