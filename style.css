@@ -72,6 +72,8 @@ a {
   font-style: normal;
   text-align: center;
   letter-spacing: 0.2px;
+  line-height: 1;
+  transition: all 0.15s;
 }
 
 .left-container {
@@ -83,7 +85,10 @@ a {
 .navbar-desktop-menu a {
   font-weight: 400;
   font-size: 1.5em;
-  line-height: 28px;
+}
+
+.navbar-desktop-menu a:hover {
+  background-color: var(--primary);
 }
 
 .right-social {
@@ -478,6 +483,9 @@ footer .container {
 
 .footer-left div ul li a {
   padding: 0;
+}
+.footer-left div ul li a:hover {
+  color: #2091f9;
 }
 
 .footer-right {
