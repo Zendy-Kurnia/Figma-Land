@@ -113,7 +113,7 @@ a {
   width: 100%;
   height: 1043px;
   color: white;
-  background: url(/res/hero-img-desktop.png) no-repeat;
+  background: url(res/hero-img-desktop.png) no-repeat;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -503,7 +503,7 @@ footer .container {
   display: block;
   width: 35px;
   height: 40px;
-  background: url(/res/ic-loc.svg) no-repeat;
+  background: url(res/ic-loc.svg) no-repeat;
   background-size: contain;
 }
 
@@ -511,7 +511,7 @@ footer .container {
   display: block;
   width: 35px;
   height: 40px;
-  background: url(/res/ic-phone.svg) no-repeat;
+  background: url(res/ic-phone.svg) no-repeat;
   background-size: contain;
 }
 
@@ -634,13 +634,13 @@ footer .container {
 }
 
 span.contact_location {
-  background: url(/res/ic-loc-color-primary.svg);
+  background: url(res/ic-loc-color-primary.svg);
 }
 span.contact_phone {
-  background: url(/res/ic-phone-color-primary.svg);
+  background: url(res/ic-phone-color-primary.svg);
 }
 span.contact_mail {
-  background: url(/res/ic-mail-color-primary.svg);
+  background: url(res/ic-mail-color-primary.svg);
 }
 
 .contact-info-right iframe {
