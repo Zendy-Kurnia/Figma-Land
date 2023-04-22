@@ -50,7 +50,7 @@
           </div>
         </div>
       </nav>
-      <section class="hero">
+      <section id="hero">
         <div class="container">
           <h2>The best products start with Figma</h2>
           <p>
@@ -61,7 +61,7 @@
         </div>
       </section>
 
-      <section class="features">
+      <section id="features">
         <div class="container">
           <div class="section-title">
             <h2>Features</h2>
@@ -110,7 +110,7 @@
         </div>
       </section>
 
-      <section class="hero-2">
+      <section id="hero-2">
         <div class="container">
           <div class="left-cta">
             <h2>Fastest way to organize</h2>
@@ -125,8 +125,34 @@
           </div>
         </div>
       </section>
+      <section id="newsletter">
+        <div class="container">
+          <div class="newsletter-left">
+            <img
+              src="/res/ilustration/undraw_newsletter_vovu.svg"
+              alt="newsletter"
+            />
+          </div>
+          <div class="newsletter-right">
+            <span>At your Fingertips</span>
+            <h3>Lightning fast prototyping</h3>
+            <p><strong>Subscribe to our Newsletter</strong></p>
+            <p>Available exclusivery on Figmaland</p>
 
-      <section class="partners">
+            <form action="/" method="post">
+              <label for="input-mail-at-newsletter">Email</label>
+              <input
+                type="email"
+                name="Email"
+                id="input-mail-at-newsletter"
+                placeholder="Your Email"
+              />
+              <button type="submit" class="main">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section id="partners">
         <div class="container">
           <div class="section-title">
             <h2>Partners</h2>
@@ -302,7 +328,7 @@
               <label for="input-name">Your Name</label>
               <input id="input-name" type="text" placeholder="Your Name" />
               <label for="input-mail">Your Email</label>
-              <input id="input-mail" type="text" placeholder="Your Email" />
+              <input id="input-mail" type="email" placeholder="Your Email" />
               <label for="input-message">Your Message</label>
               <textarea
                 id="input-message"
