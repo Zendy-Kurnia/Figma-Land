@@ -739,8 +739,8 @@ span.contact_mail {
 
 .testimonial-index-poin span.index-poin {
   display: block;
-  width: 16px;
-  height: 16px;
+  width: clamp(10px, 1vw, 16px);
+  height: clamp(10px, 1vw, 16px);
   background: var(--text-color);
   opacity: 0.2;
   border-radius: 50%;
