@@ -19,7 +19,7 @@
   .mobile-button {
     width: 40px;
     padding: 0;
-    height: 40px;
+    height: 32px;
     border-radius: 6px;
     background: url(res/ic-menu.svg) no-repeat;
     background-size: contain;
@@ -35,7 +35,8 @@
   }
 
   section {
-    padding: 50px 30px;
+    /* display: block; */
+    padding: 100px 30px;
   }
   section .container {
     width: 100%;
@@ -148,12 +149,16 @@
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: 10% 90% 10%;
+    grid-template-columns: 8% auto 8%;
     grid-template-rows: repeat(2, auto);
     gap: 0;
     grid-template-areas:
       "prev testimoni next"
       "prev index next";
+  }
+
+  .testimoni-message {
+    font-size: 1.6em;
   }
 
   .testimonials-slider button {
@@ -174,6 +179,7 @@
 
   #pricing .pricelist .plan {
     width: 100%;
+    max-width: calc(100vw - 80px);
   }
 
   /* Contact */
@@ -188,5 +194,50 @@
       "contact-info";
     gap: 60px;
     padding: 0 40px;
+  }
+
+  #contact .contact-info-right {
+    padding: 60px 0;
+  }
+
+  #contact .contact-info-right .contact-info-list {
+    flex-direction: column;
+    gap: 35px;
+
+    & li {
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      text-align: left;
+
+      & span {
+        margin: 0 20px 0 0;
+        padding: 16px;
+      }
+    }
+  }
+
+  footer .container {
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+    padding: 0 40px;
+
+    & .footer-left {
+      width: 100%;
+      flex-direction: column;
+      gap: 80px;
+      align-items: center;
+      text-align: center;
+    }
+
+    & .footer-right {
+      width: 100%;
+      gap: 80px;
+    }
+
+    & .footer-right * {
+      margin: 0 auto;
+    }
   }
 }
