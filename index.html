@@ -13,9 +13,6 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
-    <script src="jquery.js"></script>
-    <script src="main.js"></script>
   </head>
   <body>
     <header>
@@ -141,11 +138,11 @@
             <p><strong>Subscribe to our Newsletter</strong></p>
             <p>Available exclusivery on Figmaland</p>
 
-            <form action="/" method="post">
+            <form>
               <label for="input-mail-at-newsletter">Email</label>
               <input
                 type="email"
-                name="Email"
+                name="email"
                 id="input-mail-at-newsletter"
                 placeholder="Your Email"
               />
@@ -328,19 +325,30 @@
             </p>
           </div>
           <div class="contact-form-left">
-            <form action="/" method="post">
+            <form id="contact-form">
               <h3>Contact Us</h3>
               <label for="input-name">Your Name</label>
-              <input id="input-name" type="text" placeholder="Your Name" />
+              <input
+                id="input-name"
+                name="name"
+                type="text"
+                placeholder="Your Name"
+              />
               <label for="input-mail">Your Email</label>
-              <input id="input-mail" type="email" placeholder="Your Email" />
+              <input
+                id="input-mail"
+                type="email"
+                name="email"
+                placeholder="Your Email"
+              />
               <label for="input-message">Your Message</label>
               <textarea
                 id="input-message"
+                name="message"
                 placeholder="Your Message"
               ></textarea>
 
-              <button type="submit" class="main" title="Send Message" href="">
+              <button type="submit" class="main" title="Send Message">
                 Send
               </button>
             </form>
@@ -467,5 +475,12 @@
         </div>
       </div>
     </footer>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script src="jquery.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>

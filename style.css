@@ -658,6 +658,7 @@ footer .container {
 }
 
 #contact .contact-form-left button {
+  width: max-content;
   margin: 0;
 }
 
