@@ -31,7 +31,7 @@
   }
 
   body {
-    font-size: 40%;
+    font-size: 12px;
   }
 
   section {
@@ -89,7 +89,7 @@
   }
 
   /* hero 2 */
-  #hero-2 .container {
+  #about .container {
     width: 100%;
     display: grid;
     grid-template-columns: 100%;
@@ -97,7 +97,7 @@
     gap: 60px;
   }
 
-  #hero-2 .container * {
+  #about .container * {
     text-align: center;
   }
 
@@ -159,10 +159,6 @@
 
   .testimonials-slider .testimoni {
     padding: 0;
-  }
-
-  .testimoni-message {
-    font-size: 1.6em;
   }
 
   .testimonials-slider button {

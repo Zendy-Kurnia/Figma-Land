@@ -18,44 +18,44 @@
     <script src="main.js"></script>
   </head>
   <body>
-    <main>
-      <nav id="navbar-desktop">
-        <div class="container">
-          <div class="left-container">
-            <div class="navbar-desktop-menu">
-              <a href="#">Home</a>
-              <a href="#">Product</a>
-              <a href="#">Pricing</a>
-              <a href="#">About</a>
-              <a href="#">Contact</a>
-            </div>
+    <header>
+      <div class="container">
+        <div class="left-container">
+          <nav class="navbar-desktop-menu">
+            <a href="#hero" class="home">Home</a>
+            <a href="#about" class="about">About</a>
+            <a href="#features" class="features">Features</a>
+            <a href="#pricing" class="pricing">Pricing</a>
+            <a href="#contact" class="contact">Contact</a>
+          </nav>
 
-            <div class="logo-center">
-              <img
-                loading="lazy"
-                src="res/content-logo-darkLogo.png"
-                alt="Figma Land Logo"
-                title="Figma Land"
-              />
-            </div>
+          <div class="logo-center">
+            <img
+              loading="lazy"
+              src="res/content-logo-darkLogo.png"
+              alt="Figma Land Logo"
+              title="Figma Land"
+            />
           </div>
-          <div class="right-social">
-            <a href="https://twitter.com" title="Find Us on Twitter"
-              ><span class="ic-twitter"></span
-            ></a>
-            <a href="https://facebook.com" title="Find Us on Facebook"
-              ><span class="ic-facebook"></span
-            ></a>
-            <a href="https://linkedin.com" title="Find Us on Linkedin"
-              ><span class="ic-linkedin"></span
-            ></a>
-          </div>
-          <div class="mobile-button" title="Open Menu"></div>
         </div>
-      </nav>
+        <div class="mobile-button" title="Open Menu"></div>
+        <div class="right-social">
+          <a href="https://twitter.com" title="Find Us on Twitter"
+            ><span class="ic-twitter"></span
+          ></a>
+          <a href="https://facebook.com" title="Find Us on Facebook"
+            ><span class="ic-facebook"></span
+          ></a>
+          <a href="https://linkedin.com" title="Find Us on Linkedin"
+            ><span class="ic-linkedin"></span
+          ></a>
+        </div>
+      </div>
+    </header>
+    <main>
       <section id="hero">
         <div class="container">
-          <h2>The best products start with Figma</h2>
+          <h1>The best products start with Figma</h1>
           <p>
             Most calendars are designed for teams. Slate is designed for
             freelancers
@@ -63,7 +63,21 @@
           <button class="main">Try For Free</button>
         </div>
       </section>
-
+      <section id="about">
+        <div class="container">
+          <div class="left-cta">
+            <h2>Fastest way to organize</h2>
+            <p>
+              Most calendars are designed for teams. Slate is designed for
+              freelancers
+            </p>
+            <button class="main">Try For Free</button>
+          </div>
+          <div class="right-img">
+            <img loading="lazy" src="res/screen content.jpg" alt="" />
+          </div>
+        </div>
+      </section>
       <section id="features">
         <div class="container">
           <div class="section-title">
@@ -110,22 +124,6 @@
               Your Browser doesnt support Video, Update now!
             </video>
           </figure>
-        </div>
-      </section>
-
-      <section id="hero-2">
-        <div class="container">
-          <div class="left-cta">
-            <h2>Fastest way to organize</h2>
-            <p>
-              Most calendars are designed for teams. Slate is designed for
-              freelancers
-            </p>
-            <button class="main">Try For Free</button>
-          </div>
-          <div class="right-img">
-            <img loading="lazy" src="res/screen content.jpg" alt="" />
-          </div>
         </div>
       </section>
       <section id="newsletter">
@@ -250,7 +248,7 @@
       <section id="pricing">
         <div class="container">
           <div class="section-title">
-            <h2>Pricing</h2>
+            <h2>Plans and Pricings</h2>
             <p>
               Most calendars are designed for teams. Slate is designed for
               freelancers
@@ -402,7 +400,7 @@
       <div class="container">
         <div class="footer-left">
           <div class="footer-pages">
-            <h3>Pages</h3>
+            <h4>Pages</h4>
             <ul>
               <li><a href="#" title="Go to Home">Home</a></li>
               <li><a href="#" title="Go to Product">Product</a></li>
@@ -412,7 +410,7 @@
             </ul>
           </div>
           <div class="footer-links-1">
-            <h3>Links</h3>
+            <h4>Links</h4>
             <ul>
               <li><a href="#" title="Go to Home">Home</a></li>
               <li><a href="#" title="Go to Product">Product</a></li>
@@ -422,7 +420,7 @@
             </ul>
           </div>
           <div class="footer-links-2">
-            <h3>Usefull Links</h3>
+            <h4>Usefull Links</h4>
             <ul>
               <li><a href="#" title="Go to Home">Home</a></li>
               <li><a href="#" title="Go to Product">Product</a></li>
