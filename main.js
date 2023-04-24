@@ -1,8 +1,6 @@
 $(function() {
     //jQuery Code
 
-
-
     $(window).on("scroll", function () {
         if ($(window).scrollTop() > 50) {
             $('header').css({
@@ -46,27 +44,18 @@ $(function() {
             $('.contact').siblings().removeClass("active")   
         }
        
-        // var hash = window.location.hash
+    })
 
-        // switch (hash) {
-        //     case "#hero":
-        //         $('.home').toggleClass("active") 
-        //         break;
-        //     case "#about":
-        //         break;
-        //     case "#features":
-        //         $('.features').toggleClass("active") 
-        //         break;
-        //     case "#pricing":
-        //         $('.pricing').togleClass("active") 
-        //         break;
-        //     case "#contact":
-        //         $('.contact').toggleClass("active") 
-        //         break;
+    // Contact Form
+    emailjs.init("MpII3lc-2xcZOjTSi");
+
+    $('#contact-form').submit(function (e) {
+        e.preventDefault()
+        $('#contact-form button').text("Sending...")
         
-        //     default:
-        //         break;
-        // }
+        emailjs.sendForm("figmaland", "template_ocnclzc", this).then(() => {
+            $('#contact-form button').text("Sent!")
+        })
 
     })
  
