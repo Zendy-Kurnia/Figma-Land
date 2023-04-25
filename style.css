@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  transition: all 0.2s ease-in;
 }
 
 :root {
