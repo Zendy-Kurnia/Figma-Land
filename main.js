@@ -1,6 +1,7 @@
 $(function() {
     //jQuery Code
-
+    // $("#about *").fadeOut() 
+    
     $(window).on("scroll", function () {
         if ($(window).scrollTop() > 50) {
             $('header').css({
@@ -21,7 +22,7 @@ $(function() {
         var featuresOffset = $('#features').offset().top
         var pricingOffset = $('#pricing').offset().top
         var contactOffset = $('#contact').offset().top
-
+        
         if (scrollTop >= aboutOffset) {
             $('.about').addClass("active")
             $('.about').siblings().removeClass("active")   

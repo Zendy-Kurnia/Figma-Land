@@ -1,0 +1,5 @@
+#about .container {
+  transform: translateY(250px);
+  opacity: 0;
+  transition: 1s;
+}
