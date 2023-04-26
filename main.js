@@ -1,6 +1,5 @@
 $(function() {
     //jQuery Code
-
     $(window).on("scroll", function () {
         if ($(window).scrollTop() > 50) {
             $('header').css({
@@ -21,7 +20,7 @@ $(function() {
         var featuresOffset = $('#features').offset().top
         var pricingOffset = $('#pricing').offset().top
         var contactOffset = $('#contact').offset().top
-
+        
         if (scrollTop >= aboutOffset) {
             $('.about').addClass("active")
             $('.about').siblings().removeClass("active")   
@@ -43,20 +42,23 @@ $(function() {
             $('.contact').addClass("active")
             $('.contact').siblings().removeClass("active")   
         }
+
+        // Load Mail js only if needed (If user scroll down to Contact section)
+        // It because the script fully impact on loading performance
+        var contactOffset = $("#contact").offset().top 
+    
+        if (scrollTop >= contactOffset) {
+            if ($('script[src="contact-form.js"]').length == 0) {
+                var el = document.createElement("script")
+                el.src = "https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+                document.body.appendChild(el)
+                
+                var el2 = document.createElement("script")
+                el2.src = "contact-form.js"
+                document.body.appendChild(el2)
+            }
+        }
        
     })
 
-    // Contact Form
-    emailjs.init("MpII3lc-2xcZOjTSi");
-
-    $('#contact-form').submit(function (e) {
-        e.preventDefault()
-        $('#contact-form button').text("Sending...")
-        
-        emailjs.sendForm("figmaland", "template_ocnclzc", this).then(() => {
-            $('#contact-form button').text("Sent!")
-        })
-
-    })
- 
 })

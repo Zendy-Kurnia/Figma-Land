@@ -7,6 +7,7 @@
     <title>Figma Land - Business Landing Page</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mobile.css" />
+    <link rel="stylesheet" href="style-for-animation.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -57,7 +58,9 @@
             Most calendars are designed for teams. Slate is designed for
             freelancers
           </p>
-          <button class="main">Try For Free</button>
+          <button class="main" onclick="window.location.hash='#pricing'">
+            Try For Free
+          </button>
         </div>
       </section>
       <section id="about">
@@ -68,7 +71,9 @@
               Most calendars are designed for teams. Slate is designed for
               freelancers
             </p>
-            <button class="main">Try For Free</button>
+            <button class="main" onclick="window.location.hash='#pricing'">
+              Try For Free
+            </button>
           </div>
           <div class="right-img">
             <img loading="lazy" src="res/screen content.jpg" alt="" />
@@ -141,6 +146,7 @@
             <form>
               <label for="input-mail-at-newsletter">Email</label>
               <input
+                required
                 type="email"
                 name="email"
                 id="input-mail-at-newsletter"
@@ -329,6 +335,7 @@
               <h3>Contact Us</h3>
               <label for="input-name">Your Name</label>
               <input
+                required
                 id="input-name"
                 name="name"
                 type="text"
@@ -336,6 +343,7 @@
               />
               <label for="input-mail">Your Email</label>
               <input
+                required
                 id="input-mail"
                 type="email"
                 name="email"
@@ -343,6 +351,7 @@
               />
               <label for="input-message">Your Message</label>
               <textarea
+                required
                 id="input-message"
                 name="message"
                 placeholder="Your Message"
@@ -475,12 +484,8 @@
         </div>
       </div>
     </footer>
-
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
     <script src="jquery.js"></script>
     <script src="main.js"></script>
+    <script src="animation.js"></script>
   </body>
 </html>
