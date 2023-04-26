@@ -1,6 +1,5 @@
 $(function() {
     //jQuery Code
-    
     $(window).on("scroll", function () {
         if ($(window).scrollTop() > 50) {
             $('header').css({
@@ -61,9 +60,5 @@ $(function() {
         }
        
     })
-
-
-
-
 
 })
