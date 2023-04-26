@@ -1,6 +1,5 @@
 $(function() {
     //jQuery Code
-    // $("#about *").fadeOut() 
     
     $(window).on("scroll", function () {
         if ($(window).scrollTop() > 50) {

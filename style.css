@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  transition: all 0.2s ease-in;
 }
 
 :root {
@@ -15,7 +14,7 @@
 
 body {
   font-family: var(--font-family);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: normal;
   letter-spacing: 0.2px;
   color: var(--text-color);
@@ -66,12 +65,47 @@ h6 {
 }
 
 section {
-  padding: 150px 0;
+  padding: 200px 0;
+  position: relative;
+  background-color: white;
 }
+
+/* For animation */
+
+section#hero {
+  z-index: 1;
+}
+section#about {
+  z-index: 2;
+}
+section#features {
+  z-index: 3;
+}
+section#newsletter {
+  z-index: 4;
+}
+section#partners {
+  z-index: 5;
+}
+section#testimonials {
+  z-index: 6;
+}
+section#pricing {
+  z-index: 7;
+}
+section#contact {
+  z-index: 8;
+}
+footer {
+  position: relative;
+  z-index: 9;
+}
+
+/* end here */
 
 section .container {
   max-width: 1440px;
-  margin: 0 auto;
+  margin: auto auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -213,6 +247,8 @@ header.sticky a:hover {
   font-style: normal;
   line-height: 84px;
   letter-spacing: 0.2px;
+  /* for animation  */
+  transform: translateX(-100vw);
 }
 
 #hero p {
@@ -222,6 +258,14 @@ header.sticky a:hover {
   line-height: 40px;
   letter-spacing: 0.2px;
   margin: 18px auto 90px;
+  /* for animation  */
+  transform: translateX(100vw);
+}
+
+#hero button {
+  /* for animation  */
+  transform: translateY(30vh);
+  opacity: 0;
 }
 
 button {
@@ -252,6 +296,7 @@ button.main {
   color: var(--text-color);
   text-align: center;
   margin-bottom: 80px;
+  transform: translateY(50vh);
 }
 
 .section-title h2 {
@@ -266,13 +311,26 @@ button.main {
 }
 
 .features-list {
-  width: 870px;
+  width: 1000px;
   margin: 0 auto;
   text-align: center;
   display: grid;
   column-gap: 52px;
   grid-template-columns: repeat(3, 1fr);
 }
+
+/* F0r animation */
+.features-list .feature:nth-child(1) {
+  transform: translateX(-50vw);
+}
+.features-list .feature:nth-child(2) {
+  transform: translateY(500px);
+}
+.features-list .feature:nth-child(3) {
+  transform: translateX(50vw);
+}
+
+/* end here*/
 
 .feature h3 {
   margin: 20px 0 0;
@@ -295,6 +353,8 @@ button.main {
 
 .features-video {
   position: relative;
+  /* For animation */
+  transform: scale(0.6);
 }
 
 .features-video video {
@@ -329,7 +389,9 @@ button.play img {
 }
 
 /* about */
-
+#about {
+  background: white;
+}
 #about .container {
   max-width: 1236.3px;
   display: grid;
@@ -622,6 +684,7 @@ footer .container {
   background: #ffffff;
   border: 1px solid #dddddd;
   box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+  transform: scale(0.6);
 }
 
 #contact .contact-form-left form {
@@ -680,6 +743,9 @@ footer .container {
 #contact .contact-info-right .contact-info-list li {
   width: calc(100% / 3);
   overflow-wrap: break-word;
+  /* For animation */
+  visibility: hidden;
+  transform: translate(100px);
 }
 
 .contact-info-list li span {

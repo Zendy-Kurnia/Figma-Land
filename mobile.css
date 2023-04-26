@@ -49,7 +49,8 @@
   }
 
   #hero {
-    height: 863px;
+    /* height: 863px; */
+    min-height: 100vh;
   }
   #hero h2 {
     width: 100%;
