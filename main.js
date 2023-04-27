@@ -61,4 +61,29 @@ $(function() {
        
     })
 
+    // Slider
+
+    
+    // items.forEach(item => {
+        //     item.css({
+            //         animation: "slideLR 1s"
+            //     })
+            // });
+            
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    // End of jQuery
 })
+
+
