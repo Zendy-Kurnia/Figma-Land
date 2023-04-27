@@ -60,5 +60,8 @@ $(function() {
         }
        
     })
-
+    
+    // End of jQuery
 })
+
+

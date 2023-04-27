@@ -8,18 +8,18 @@ section .container * {
 
 #hero .container.animate h1 {
   transform: translateX(0);
-  transition: 1s 0.5s;
+  transition: 1s 0.3s;
 }
 
 #hero .container.animate p {
   transform: translateX(0);
-  transition: 1s 0.6s;
+  transition: 1s 0.4s;
 }
 
 #hero .container.animate button {
   transform: translateY(0);
   opacity: 1;
-  transition: 1s 1s;
+  transition: 1s 0.9s;
 }
 
 section .container.animate .section-title {
@@ -172,13 +172,8 @@ section .container.animate .section-title {
 }
 
 /* testimonials-slider */
-#testimonials .testimonials-slider .testimoni-wrapper,
-#testimonials .testimonials-slider .testimonial-index-poin {
-  opacity: 0;
-}
-.animate .testimonials-slider .testimoni-wrapper,
-.animate .testimonials-slider .testimonial-index-poin {
-  animation: zoom-Out-In 1s ease-in 1s forwards;
+.animate .testimonials-slider .testimoni {
+  animation: slidingLeft 0.25s ease-in 2 0.5s;
 }
 
 button.testimoni-next {
@@ -328,5 +323,17 @@ button.testimoni-prev {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes slidingLeft {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-200%);
   }
 }

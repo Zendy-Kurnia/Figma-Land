@@ -775,21 +775,21 @@ span.contact_mail {
 }
 
 /* Testimonials */
-
+#testimonials .container {
+  position: relative;
+}
 #testimonials .testimonials-slider {
   width: 100%;
+  max-width: 900px;
   height: auto;
-  display: grid;
-  grid-template-columns: 50px auto 50px;
-  grid-template-rows: repeat(2, auto);
-  gap: 20px;
-  grid-template-areas:
-    "prev testimoni next"
-    "prev index next";
+  display: block;
+  overflow: hidden;
 }
 
-.testimonials-slider .testimoni:not(:first-child) {
-  display: none;
+.testimonials-slider .testimoni-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
 }
 
 .testimonials-slider .testimoni {
@@ -800,7 +800,10 @@ span.contact_mail {
   display: flex;
   flex-direction: column;
   gap: 60px;
-  margin: 80px 20px 20px;
+  margin: 80px 0 20px;
+  width: 100%;
+  max-width: 900px;
+  transition: 0.8s;
 }
 
 .testimonials-slider .testimoni .testimoni-message {
@@ -847,7 +850,6 @@ span.contact_mail {
 }
 
 .testimonial-index-poin {
-  grid-area: index;
   width: max-content;
   margin: 0 auto 140px;
   display: flex;
@@ -863,13 +865,15 @@ span.contact_mail {
   opacity: 0.2;
   border-radius: 50%;
   cursor: pointer;
+  transition: 0.8s;
 }
 
 span.index-poin.active {
   opacity: 0.8;
 }
 
-.testimonials-slider button {
+button.testimoni-prev,
+button.testimoni-next {
   all: unset;
   width: 40px;
   height: 40px;
@@ -878,15 +882,16 @@ span.index-poin.active {
   background-size: 100%;
   border-radius: 50%;
   cursor: pointer;
+  position: absolute;
 }
 
-.testimonials-slider button.testimoni-next {
-  grid-area: next;
+button.testimoni-next {
+  right: 0;
   background: url(res/ic_round-navigate-next.svg) no-repeat center;
 }
 
-.testimonials-slider button.testimoni-prev {
-  grid-area: prev;
+button.testimoni-prev {
+  left: 0;
   background: url(res/ic_round-navigate-pref.svg) no-repeat center;
 }
 
