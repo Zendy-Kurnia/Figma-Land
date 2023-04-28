@@ -365,3 +365,8 @@
   }
 }
 
+@media screen and (max-width: 320px) {
+  #hero h1 {
+    font-size: 5.854em;
+  }
+}
