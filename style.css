@@ -10,6 +10,7 @@
   --text-color: #252b42;
   --drpshdw: drop-shadow(0px 8.14769px 63.1446px rgba(0, 0, 0, 0.15));
   --font-family: "Quicksand", sans-serif, system-ui;
+  --header-height: 187px;
 }
 
 body {
@@ -113,13 +114,24 @@ section .container {
   padding: 10px 40px;
 }
 
+.header-wrapper {
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+#mobile-menu {
+  display: none;
+}
 header {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: auto;
-  position: fixed;
   top: 0;
   left: 0;
   z-index: 9;
@@ -224,7 +236,7 @@ header.sticky a:hover {
 #hero {
   position: relative;
   width: 100%;
-  height: 1043px;
+  height: 125vh;
   color: white;
   background: url(res/hero-img-desktop.webp) no-repeat;
   background-size: cover;
@@ -255,7 +267,7 @@ header.sticky a:hover {
   width: 756px;
   height: 80px;
   font-style: normal;
-  line-height: 40px;
+  line-height: 1.8;
   letter-spacing: 0.2px;
   margin: 18px auto 90px;
   /* for animation  */
@@ -300,14 +312,14 @@ button.main {
 }
 
 .section-title h2 {
-  line-height: 55px;
+  line-height: 1.8;
   text-align: center;
   letter-spacing: 0.2px;
   margin-bottom: 17px;
 }
 
 .section-title p {
-  line-height: 40px;
+  line-height: 1.8;
 }
 
 .features-list {
@@ -340,7 +352,7 @@ button.main {
 }
 
 .feature p {
-  line-height: 1.4;
+  line-height: 1.8;
   padding: 10px;
 }
 
@@ -400,13 +412,13 @@ button.play img {
 }
 
 .left-cta h2 {
-  line-height: 55px;
+  line-height: 1.2;
   letter-spacing: 0.2px;
 }
 
 .left-cta p {
   font-style: normal;
-  line-height: 40px;
+  line-height: 1.8;
   letter-spacing: 0.2px;
   margin: 30px 0 60px;
 }
@@ -500,7 +512,7 @@ button.play img {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 2em;
-  line-height: 1.8;
+  line-height: 1.6;
   margin-bottom: 20px;
   letter-spacing: 0.1px;
 }
@@ -522,7 +534,7 @@ button.play img {
     "number pay-info";
   text-align: left;
   margin: 0 auto;
-  line-height: 0.5;
+  line-height: 0.6;
   align-items: center;
 }
 
@@ -580,7 +592,7 @@ footer .container {
   font-style: normal;
   font-size: 1.4em;
   font-weight: 600;
-  line-height: 28px;
+  line-height: 1.8;
   letter-spacing: 0.1px;
   margin-bottom: 25px;
 }
@@ -618,7 +630,7 @@ footer .container {
   display: flex;
   gap: 10px;
   font-style: normal;
-  line-height: 27px;
+  line-height: 1.8;
   letter-spacing: 0.2px;
   align-items: center;
 }
@@ -664,7 +676,7 @@ footer .container {
 /* Contact */
 #contact .container {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 40% auto;
   grid-template-rows: repeat(2, auto);
   grid-template-areas:
     "title title"
@@ -717,7 +729,7 @@ footer .container {
   width: 100%;
   text-align: center;
   font-style: normal;
-  line-height: 28px;
+  line-height: 1.6;
   letter-spacing: 0.1px;
 }
 
@@ -917,20 +929,20 @@ button.testimoni-prev {
 
 .newsletter-right > span {
   font-weight: 600;
-  line-height: 28px;
+  line-height: 1.8;
   letter-spacing: 0.1px;
 }
 
 .newsletter-right h3 {
   max-width: 400px;
-  line-height: 55px;
+  line-height: 1.8;
   letter-spacing: 0.2px;
   color: var(--text-color);
   padding: 20px 0;
 }
 
 .newsletter-right p {
-  line-height: 28px;
+  line-height: 1.8;
 }
 
 .newsletter-right form {

@@ -1,6 +1,25 @@
 /* Responsive Media Query */
 
 @media (max-width: 560px) {
+  :root {
+    --header-height: 100px;
+  }
+  h4,
+  p,
+  span,
+  button.main,
+  input,
+  textarea,
+  q,
+  li {
+    font-weight: 400;
+    font-size: 1.8em;
+  }
+
+  header {
+    height: var(--header-height);
+  }
+
   nav .navbar-desktop-menu {
     position: absolute;
     top: 0;
@@ -16,27 +35,51 @@
     display: none;
   }
 
+  .navbar-desktop-menu a,
+  .right-social {
+    display: none;
+  }
+
+  .navbar-desktop-menu a.active {
+    display: flex;
+  }
+
+  .left-container {
+    gap: 0;
+    flex-direction: row-reverse;
+  }
   .mobile-button {
     width: 40px;
     padding: 0;
     height: 32px;
     border-radius: 6px;
-    background: url(res/ic-menu.svg) no-repeat;
-    background-size: contain;
     display: block;
+    cursor: pointer;
+    transition: 0.6s;
+  }
+
+  .mobile-button svg {
+    fill: white;
+  }
+  .sticky .mobile-button svg {
+    fill: black;
   }
 
   .mobile-button:hover {
     background-color: var(--primary);
   }
 
+  .mobile-button:hover svg {
+    fill: white;
+  }
+
   body {
-    font-size: 12px;
+    font-size: 8px;
   }
 
   section {
     /* display: block; */
-    padding: 100px clamp(15px, 6vw, 30px);
+    padding: 135px clamp(15px, 6vw, 30px);
   }
   section .container {
     width: 100%;
@@ -49,8 +92,7 @@
   }
 
   #hero {
-    /* height: 863px; */
-    min-height: 100vh;
+    height: 110vh;
   }
   #hero h2 {
     width: 100%;
@@ -160,6 +202,7 @@
 
   .testimonials-slider .testimoni {
     padding: 0;
+    max-width: 90vw;
   }
 
   .testimonials-slider button {
@@ -168,6 +211,21 @@
     padding: 0;
     margin: auto 0;
     background-size: contain !important;
+  }
+
+  button.testimoni-prev,
+  button.testimoni-next {
+    width: 10px;
+    height: 10px;
+    background-size: contain;
+    margin: auto 0;
+  }
+
+  button.testimoni-prev {
+    left: -10px;
+  }
+  button.testimoni-next {
+    right: -10px;
   }
 
   #pricing .pricelist {
@@ -236,5 +294,64 @@
 
   footer .container .footer-right * {
     margin: 0 auto;
+  }
+
+  /* Mobile menu */
+  .overlay {
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    transition: 0.3s;
+  }
+
+  .header-wrapper.bg-dark ~ .overlay {
+    opacity: 0.6;
+    z-index: 998;
+  }
+  #mobile-menu {
+    padding: 60px;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  #mobile-menu.show {
+    display: flex;
+    transition: 0.6s;
+  }
+
+  .header-wrapper.bg-dark {
+    background: var(--text-color);
+    filter: var(--drpshdw);
+  }
+
+  .navbar-mobile-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-mobile-menu a {
+    /* color: var(--primary); */
+    padding: 20px 40px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1.5em;
+    text-align: left;
+  }
+
+  .social-mobile {
+    padding: 40px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .social-mobile a {
+    padding: 0;
   }
 }

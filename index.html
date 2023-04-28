@@ -16,40 +16,99 @@
     />
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="left-container">
-          <nav class="navbar-desktop-menu">
-            <a href="#hero" class="home">Home</a>
-            <a href="#about" class="about">About</a>
-            <a href="#features" class="features">Features</a>
-            <a href="#pricing" class="pricing">Pricing</a>
-            <a href="#contact" class="contact">Contact</a>
-          </nav>
+    <div class="header-wrapper">
+      <header>
+        <div class="container">
+          <div class="left-container">
+            <nav class="navbar-desktop-menu">
+              <a href="#hero" class="home">Home</a>
+              <a href="#about" class="about">About</a>
+              <a href="#features" class="features">Features</a>
+              <a href="#pricing" class="pricing">Pricing</a>
+              <a href="#contact" class="contact">Contact</a>
+            </nav>
 
-          <div class="logo-center">
-            <img
-              loading="lazy"
-              src="res/content-logo-darkLogo.png"
-              alt="Figma Land Logo"
-              title="Figma Land"
-            />
+            <div class="logo-center">
+              <img
+                loading="lazy"
+                src="res/content-logo-darkLogo.png"
+                alt="Figma Land Logo"
+                title="Figma Land"
+              />
+            </div>
+          </div>
+          <div class="mobile-button" title="Open Menu">
+            <svg
+              width="40"
+              height="32"
+              viewBox="0 0 40 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.66797 8H33.3346V10.6667H6.66797V8ZM13.3346 14.6667H33.3346V17.3333H13.3346V14.6667ZM21.668 21.3333H33.3346V24H21.668V21.3333Z"
+              />
+            </svg>
+          </div>
+          <div class="right-social">
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener"
+              title="Find Us on Twitter"
+              ><span class="ic-twitter"></span
+            ></a>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener"
+              title="Find Us on Facebook"
+              ><span class="ic-facebook"></span
+            ></a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener"
+              title="Find Us on Linkedin"
+              ><span class="ic-linkedin"></span
+            ></a>
           </div>
         </div>
-        <div class="mobile-button" title="Open Menu"></div>
-        <div class="right-social">
-          <a href="https://twitter.com" title="Find Us on Twitter"
+      </header>
+      <div id="mobile-menu">
+        <nav class="navbar-mobile-menu">
+          <a href="#hero" class="home">Home</a>
+          <a href="#about" class="about">About</a>
+          <a href="#features" class="features">Features</a>
+          <a href="#pricing" class="pricing">Pricing</a>
+          <a href="#contact" class="contact">Contact</a>
+        </nav>
+        <div class="right-social social-mobile">
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener"
+            title="Find Us on Twitter"
             ><span class="ic-twitter"></span
           ></a>
-          <a href="https://facebook.com" title="Find Us on Facebook"
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener"
+            title="Find Us on Facebook"
             ><span class="ic-facebook"></span
           ></a>
-          <a href="https://linkedin.com" title="Find Us on Linkedin"
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener"
+            title="Find Us on Linkedin"
             ><span class="ic-linkedin"></span
           ></a>
         </div>
       </div>
-    </header>
+    </div>
+    <div class="overlay"></div>
     <main>
       <section id="hero">
         <div class="container">
@@ -147,6 +206,7 @@
               <label for="input-mail-at-newsletter">Email</label>
               <input
                 required
+                oninvalid=" this.style.outline = '1px solid red', this.setCustomValidity('Email cannot be blank')"
                 type="email"
                 name="email"
                 id="input-mail-at-newsletter"

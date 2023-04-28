@@ -225,6 +225,39 @@ button.testimoni-prev {
   animation: slideIn-rtl 0.3s 1.9s forwards;
 }
 
+/* #mobile-menu */
+#mobile-menu.show {
+  --Y: -100vh;
+  animation: slideDown 0.4s forwards;
+}
+#mobile-menu.show nav a,
+.social-mobile {
+  --Y: -10px;
+  opacity: 0;
+}
+#mobile-menu.show nav a:nth-child(1) {
+  animation: slideDown 0.6s 0s forwards;
+}
+#mobile-menu.show nav a:nth-child(2) {
+  animation: slideDown 0.6s 0.1s forwards;
+}
+#mobile-menu.show nav a:nth-child(3) {
+  animation: slideDown 0.6s 0.2s forwards;
+}
+#mobile-menu.show nav a:nth-child(4) {
+  animation: slideDown 0.6s 0.3s forwards;
+}
+#mobile-menu.show nav a:nth-child(5) {
+  animation: slideDown 0.6s 0.4s forwards;
+}
+#mobile-menu.show .social-mobile {
+  animation: slideDown 0.6s 0.5s forwards;
+}
+
+.header-wrapper.bg-dark {
+  transition: 0.4s;
+}
+
 @keyframes zoom-In-Out {
   0% {
     transform: scale(0.6);
@@ -314,11 +347,38 @@ button.testimoni-prev {
     transform: rotateY(360deg);
   }
 }
+@keyframes flip-V-D {
+  0% {
+    transform: rotateX(0deg);
+  }
+  25% {
+    transform: rotateX(90deg);
+  }
+  50% {
+    transform: rotateX(180deg);
+  }
+  75% {
+    transform: rotateX(270deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
 
 @keyframes slideUp {
   0% {
     opacity: 0;
     transform: translateY(30vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(var(--Y));
   }
   100% {
     opacity: 1;

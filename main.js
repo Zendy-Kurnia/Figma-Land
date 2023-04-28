@@ -8,14 +8,14 @@ $(function() {
             $('header .logo-center img').attr("src", "res/ilustration/logo-black.jpg")
         } else {
             $('header').css({
-                height: "187px",
+                height: "var(--header-height)",
             }).removeClass("sticky")
             
             
             $('header .logo-center img').attr("src", "res/content-logo-darkLogo.png")
         }
 
-        var scrollTop = $(window).scrollTop()
+        var scrollTop = $(window).scrollTop() + 1
         var aboutOffset = $('#about').offset().top
         var featuresOffset = $('#features').offset().top
         var pricingOffset = $('#pricing').offset().top
@@ -61,7 +61,18 @@ $(function() {
        
     })
     
+    // Showing mobile menu
+    // hide mobile menu if user click inside mobile menu
+    // Click overlay to hide mobile-menu  
+    // Disable scrolling if mobile menu is being shown
+    // Rotate mobile button 180deg if mobile menu is being shown
+    
+    $('.mobile-button, #mobile-menu, .overlay').click(function () {
+        $('#mobile-menu').toggleClass('show')    
+        $('.header-wrapper').toggleClass('bg-dark')
+        $('#mobile-menu').hasClass('show') ? $('body').css({overflowY: 'hidden'}) : $('body').css({overflowY: 'auto'})
+        $('#mobile-menu').hasClass('show') ? $('.mobile-button').css({transform: 'rotate(180deg)'}) : $('.mobile-button').css({transform: 'rotate(0)'}) 
+    })
+
     // End of jQuery
 })
-
-
