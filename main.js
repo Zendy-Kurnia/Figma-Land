@@ -58,6 +58,14 @@ $(function() {
                 document.body.appendChild(el2)
             }
         }
+        
+        // Load maps iframe only if user scroll down to #contact
+        if (scrollTop >= contactOffset) {
+            if ($('.google_maps iframe').length == 0) {
+                var maps = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.133871563915!2d109.6492080758221!3d-7.66875367590129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7aca0881659fcb%3A0x1fb6a781a4f47e70!2sAlun-alun%20Kota%20Kebumen!5e0!3m2!1sid!2sid!4v1682099392332!5m2!1sid!2sid" title="See on Maps" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+                $('.google_maps').html(maps)
+            }
+        }
        
     })
     
