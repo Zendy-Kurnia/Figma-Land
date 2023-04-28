@@ -305,6 +305,11 @@
     gap: 80px;
   }
 
+  .footer-right .footer-location,
+  .footer-right .footer-phone {
+    flex-direction: column;
+  }
+
   footer .container .footer-right * {
     margin: 0 auto;
   }
