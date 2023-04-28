@@ -300,6 +300,7 @@ button:hover {
 button.main {
   color: white;
   padding: 20px 60px;
+  padding: clamp(12px, 5vw, 20px) clamp(20px, 12vw, 60px);
   border-radius: 35px;
   margin: 0 auto;
   line-height: 1.2;

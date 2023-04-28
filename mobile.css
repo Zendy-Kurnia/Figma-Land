@@ -3,6 +3,7 @@
 @media (max-width: 560px) {
   :root {
     --header-height: 100px;
+    --padding-lr: clamp(15px, 6vw, 30px);
   }
   h4,
   p,
@@ -21,7 +22,7 @@
   }
 
   header .container {
-    padding: 0 clamp(15px, 6vw, 30px);
+    padding: 0 var(--padding-lr);
   }
 
   nav .navbar-desktop-menu {
@@ -247,7 +248,7 @@
 
   #pricing .pricelist .plan {
     width: 100%;
-    max-width: calc(100vw - 80px);
+    max-width: calc(100vw - var(--padding-lr));
   }
 
   /* Contact */
@@ -265,6 +266,9 @@
 
   #contact .contact-info-right {
     padding: 60px 0;
+  }
+  #contact .contact-form-left {
+    padding: 52px calc(var(--padding-lr) + 10px);
   }
 
   #contact .contact-info-right .contact-info-list {
