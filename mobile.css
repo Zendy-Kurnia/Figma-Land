@@ -20,6 +20,10 @@
     height: var(--header-height);
   }
 
+  header .container {
+    padding: 0 clamp(15px, 6vw, 30px);
+  }
+
   nav .navbar-desktop-menu {
     position: absolute;
     top: 0;
@@ -47,11 +51,16 @@
   .left-container {
     gap: 0;
     flex-direction: row-reverse;
+    max-width: calc(100% - 50px);
+  }
+
+  .logo-center img {
+    max-width: 45vw;
   }
   .mobile-button {
-    width: 40px;
+    width: clamp(30px, 9vw, 40px);
     padding: 0;
-    height: 32px;
+    height: auto;
     border-radius: 6px;
     display: block;
     cursor: pointer;
@@ -355,3 +364,4 @@
     padding: 0;
   }
 }
+
