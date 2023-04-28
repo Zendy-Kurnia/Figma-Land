@@ -13,6 +13,7 @@
   --header-height: 187px;
   --plan-gap: clamp(40px, 12vw, 80px);
   --form-gap: clamp(22px, 6vw, 45px);
+  --btn-shdw: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -296,6 +297,7 @@ button {
 
 button:hover {
   opacity: 0.9;
+  transform: translateY(-10px);
   transition: 0.2s all ease-in;
 }
 
@@ -306,6 +308,7 @@ button.main {
   border-radius: 35px;
   margin: 0 auto;
   line-height: 1.2;
+  box-shadow: var(--btn-shdw);
 }
 
 /* Features */
