@@ -11,6 +11,8 @@
   --drpshdw: drop-shadow(0px 8.14769px 63.1446px rgba(0, 0, 0, 0.15));
   --font-family: "Quicksand", sans-serif, system-ui;
   --header-height: 187px;
+  --plan-gap: clamp(40px, 12vw, 80px);
+  --form-gap: clamp(22px, 6vw, 45px);
 }
 
 body {
@@ -499,7 +501,7 @@ button.play img {
   padding: 60px 40px;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: var(--plan-gap);
   height: max-content;
   width: 350px;
 }
@@ -709,8 +711,7 @@ footer .container {
 #contact .contact-form-left form {
   display: flex;
   flex-direction: column;
-
-  gap: 45px;
+  gap: var(--form-gap);
 }
 
 .contact-form-left form label {
