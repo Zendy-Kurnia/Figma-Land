@@ -21,6 +21,12 @@ body {
   color: var(--text-color);
 }
 
+body,
+main,
+footer {
+  overflow-x: hidden;
+}
+
 h1 {
   font-weight: 700;
   font-size: 6.854em;
